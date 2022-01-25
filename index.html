@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Api KenzieFood</title> 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./public/reset.css" />
-    <link rel="stylesheet" href="./public/style.css" />
+    <link rel="stylesheet" href="./public/css/reset.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
     <title>KenzieFood</title>
 </head>
 
@@ -222,9 +220,24 @@
 
             </ul>
         </section>
-        <!-- colocar o carrinho abaixo antes do </main> -->
         
+        <aside id='cartEmpty'>
+            <div class="retangle">
+                <img src="./public/icons/carrinho.png" alt="Carrinho de compras">
+                <p class="cart-name">Carrinho</p>
+            </div>
+            <div class="no-products">
+                <img src="./public/icons/shopping-bag.png" alt="Bolsa de supermercado">
+                <p class='text'>
+                    Ops!
+                    Por enquanto não temos produtos no carrinho
+                </p>
+            </div>
+        </aside>
+
     </main>
+
+    <script type="Module" src="./src/index.js"></script>
+
 </body>
 
-</html>
