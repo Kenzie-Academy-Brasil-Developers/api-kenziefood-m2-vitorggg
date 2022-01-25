@@ -37,6 +37,10 @@ body{
     padding: 18.75px 60.35px 17.29px 17.65px;
 }
 
+.search-input:hover{
+    border: 1.5px solid #212529;
+}
+
 .search-button{
     height: 44.11575698852539px;
     width: 44.11575698852539px;
@@ -50,6 +54,13 @@ body{
     margin-top: 5px;
 }
 
+.search-button:hover{
+    background: #FF2253;
+    background-image: url('./icons/Text (2).png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
 .category-buttons{
     display: flex;
     margin-top: 16.48px;
@@ -61,6 +72,10 @@ body{
     justify-content: center;
     align-items: center;
     margin-right: 22px;
+}
+
+.categorys:hover{
+    border: 1.5px solid #212529;
 }
 
 .category-todos{
@@ -105,4 +120,30 @@ body{
     border: 1.5px solid #F3EEF5;
     box-sizing: border-box;
     border-radius: 30px;
+}
+
+@media only screen and (min-width: 1600px){
+    
+    .search-area{
+        width: 1600px;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.25);
+    }
+
+    .logo{
+        margin: 17px 0px 19px 116px;
+    }
+
+    .search{
+        margin: 15px 115px 16px 0px;
+    }
+
+    .category-buttons{
+        margin-left: 117px;
+        margin-top: 42px;
+    }
+
 }
