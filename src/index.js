@@ -1,2 +1,1 @@
-import { searchImages } from "./modules/searchImages.js";
-
+import { cart } from "./modules/cart";
