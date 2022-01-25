@@ -1,0 +1,108 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+.logo{
+    width: 123px;
+    height: 46px;
+    margin-top: 21px;
+    margin-left: 17px;
+}
+
+.logo-img{
+    width: 100%;
+}
+
+.search{
+    display: flex;
+    height: 54px;
+    width: 343px;
+    margin-top: 15.48px;
+    margin-left: 17px;
+}
+
+.search-input{
+    width: 100%;
+    background: #F8F9FA;
+    border: 1.65434px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 33.0868px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14.7053px;
+    line-height: 18px;
+    color: #868E96;
+    padding: 18.75px 60.35px 17.29px 17.65px;
+}
+
+.search-button{
+    height: 44.11575698852539px;
+    width: 44.11575698852539px;
+    background: #FFE9EE;
+    background-image: url('./icons/Text (1).png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-radius: 100%;
+    border: none;
+    margin-left: -50px;
+    margin-top: 5px;
+}
+
+.category-buttons{
+    display: flex;
+    margin-top: 16.48px;
+    margin-left: 18px;
+}
+
+.categorys{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 22px;
+}
+
+.category-todos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #F8F9FA;
+    border: 1.5px solid #FFF7F4;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.category-panificadora{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #FFF7F4;
+    border: 1.5px solid #FFF7F4;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.category-frutas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #FFE4EA;
+    border: 1.5px solid #FFE4EA;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.category-bebidas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #F3EEF5;
+    border: 1.5px solid #F3EEF5;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
