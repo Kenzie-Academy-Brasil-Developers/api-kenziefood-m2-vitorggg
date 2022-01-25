@@ -47,7 +47,7 @@ body{
     height: 44.11575698852539px;
     width: 44.11575698852539px;
     background: #FFE9EE;
-    background-image: url('./icons/Text (1).png');
+    background-image: url('../icons/Text\ \(1\).png');
     background-position: center; 
     background-repeat: no-repeat; 
     border-radius: 100%;
@@ -58,7 +58,7 @@ body{
 
 .search-button:hover{
     background: #FF2253;
-    background-image: url('./icons/Text (2).png');
+    background-image: url('../icons/Text\ \(2\).png');
     background-position: center; 
     background-repeat: no-repeat; 
 }
@@ -128,7 +128,6 @@ body{
 
 .productsShowcase{
     margin: 0 auto ;
-    
 }
 
 .productsShowcase-list{
@@ -236,6 +235,8 @@ body{
     box-shadow: 0;
 }
 
+/* ------Cart------------------------------------------------------------------------------ */
+
 aside {
     width: 342px;
     height: 499.11px;;
@@ -243,10 +244,17 @@ aside {
 }
 
 .retangle {
+    display: flex;
     width: 100%;
     height: 59.85px;
     background: #FF2253;
     border-radius: 14.9625px 14.9625px 0px 0px;
+}
+
+.cart-logo{
+    height: 14.962475776672363px;
+    width: 14.962475776672363px;
+    margin: 24.58px 0px 20.31px 24.58px;
 }
 
 .cart-name {
@@ -256,7 +264,7 @@ aside {
     font-size: 17.1px;
     line-height: 28px;
     color: #FFFFFF;
-    
+    margin: 18.17px 0px 12.82px 21.38px;
 }
 
 .no-products {
@@ -264,7 +272,7 @@ aside {
     background-color: #F8F9FA;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -273,18 +281,33 @@ aside {
     height: 56.64px;
 }
 
-
 .no-products p {
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
+    font-size: 12.82px;
+    color: #868E96;
+    height: 73.7436294555664px;
+    width: 218.02464294433594px;
+    margin: 42.84px 61.99px 0px 60.92px;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.no-products span{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
     font-size: 17.1px;
+    line-height: 28px;
+    text-align: center;
     color: #868E96;
 }
 
 .no-products .text {
     font-weight: 500;
 }
+
 @media only screen and (min-width: 470px){
     .category-buttons{
         overflow-x: hidden;
@@ -293,10 +316,11 @@ aside {
 @media only screen and (min-width: 970px){
     main{
         margin: 0 20px ;
+        display: flex;
     }
     .productsShowcase{
-        margin: 0 auto ;
-        
+        /* margin: 0 auto ; */
+        margin-left: 56px;
     }
     .productsShowcase-list{
         display: flex;
@@ -318,17 +342,23 @@ aside {
     .container{
         box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.25);
     }
+
     .category-buttons{
         overflow-x: hidden;
         max-width: 1600px;
         padding: 0 20px;
     }
 
+    /* aside{
+        margin-left: 73px;
+    } */
+
 }
 
 
 
 @media only screen and (min-width: 1600px){
+
     main{
         max-width: 1600px;
         margin: 0 auto;
@@ -353,13 +383,29 @@ aside {
         margin: 15px 115px 16px 0px;
     }
 
+    .search-area{
+        margin-left: 118px;
+    }
+
     .category-buttons{
-        /* margin-left: 117px;
-        margin-top: 42px; */
+        margin-left: 117px;
+        margin-top: 42px;
         overflow-x: hidden;
         max-width: 1600px;
-        margin: 42px auto 58px;
+        /* margin: 42px auto 58px; */
 
     }
+
+    .productsShowcase{
+        margin-left: 118px;
+    }
+
+    .productsShowcase-list{
+        display: flex;
+        overflow-x: scroll;
+        margin: 27px 0 27px 18px;
+        max-width: 1200px;
+    }
+
 
 }
