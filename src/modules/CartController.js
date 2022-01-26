@@ -12,7 +12,7 @@ class CartController{
 
     static addEvent( products ){
         
-        CartController.showProductsOfLocalStorage()
+        // CartController.showProductsOfLocalStorage()
 
         const ul = document.querySelector('ul')
 
@@ -21,6 +21,7 @@ class CartController{
                 let id = e.target.id 
                 const currentProduct = products.find(elem => elem.id==id)
                 productsAdded.push(currentProduct)
+                console.log(productsAdded)
                 
                 localStorage.setItem('productsAdded', JSON.stringify(productsAdded) )
 
@@ -48,19 +49,20 @@ class CartController{
         })
 
     }
-    static showProductsOfLocalStorage(){
-        let string = localStorage.getItem('productsAdded')
-        productsAdded = JSON.parse(string) 
-        CartController.verify()
-        productsAdded.forEach(elem =>{
-            const list = TemplateCart.gerarTemplate(elem)
-            CartController.cartShowCase.appendChild(list)
-        })
-        CartController.atualizarTotQtd(productsAdded)
-    }
+    // static showProductsOfLocalStorage(){
+    //     let string = localStorage.getItem('productsAdded')
+    //     productsAdded = JSON.parse(string) 
+    //     CartController.verify()
+    //     productsAdded.forEach(elem =>{
+    //         const list = TemplateCart.gerarTemplate(elem)
+    //         CartController.cartShowCase.appendChild(list)
+    //     })
+    //     CartController.atualizarTotQtd(productsAdded)
+    // }
 
     static verify(){
-        if(productsAdded.length!==0){
+        console.log(productsAdded)
+        if(productsAdded.length !== 0){
             CartController.noProducts.classList.add('hidden')
             CartController.cartShowCase.classList.remove('hidden')
             CartController.totals.classList.remove('hidden')

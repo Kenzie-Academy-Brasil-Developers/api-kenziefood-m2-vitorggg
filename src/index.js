@@ -10,9 +10,6 @@ import { ModalController } from "./modules/ModalController.js";
 
 const products = await SearchProducts.search()
 
-console.log(products)
-
-
 ShowCaseModelator.appendList( products )
 
 ModalController.addEvent()
