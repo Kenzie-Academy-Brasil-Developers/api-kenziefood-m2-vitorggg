@@ -14,7 +14,8 @@ import { SearchProducts } from "./modules/searchproducts.js";
 import { ShowCaseModelator } from "./modules/vitriniModeladora.js"; //classe modeladora
 import { FilterCategory } from "./modules/FilterCategory.js";
 import { FilterSearch } from "./modules/FilterSearch.js";
-import { AddCart, RemoveCart } from "./modules/addCart.js";
+
+import { CartController } from "./modules/CartController.js";
 
 
 const products = await SearchProducts.search()
@@ -24,11 +25,10 @@ console.log(products)
 
 FilterCategory.addEvent(products)
 FilterSearch.addEvent(products)
-RemoveCart.addEvent()
 ShowCaseModelator.appendList( products )
 
 
-AddCart.addEvent(products)
+CartController.addEvent(products)
 
 
 //const product = new templateProdutos(products[0]) //aqui vem a vitrini modeladora
