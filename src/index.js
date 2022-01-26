@@ -23,11 +23,10 @@ const products = await SearchProducts.search()
 console.log(products)
 
 
-FilterCategory.addEvent(products)
-FilterSearch.addEvent(products)
 ShowCaseModelator.appendList( products )
 
-
+FilterCategory.addEvent(products)
+FilterSearch.addEvent(products)
 CartController.addEvent(products)
 
 

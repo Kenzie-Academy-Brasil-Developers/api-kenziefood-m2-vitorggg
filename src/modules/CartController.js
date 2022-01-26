@@ -1,6 +1,6 @@
 import { TemplateCart } from './templates.js'
 
-const productsAdded = []
+let productsAdded = []
 
 class CartController{
     
@@ -11,22 +11,29 @@ class CartController{
     static totalSpan = document.getElementById('total')
 
     static addEvent( products ){
+        
+        CartController.showProductsOfLocalStorage()
 
         const ul = document.querySelector('ul')
-        ul.addEventListener('click',(e)=>{ //adicionar
+
+        ul.addEventListener('click',(e)=>{ //evento adicionar
             if( e.target.closest('button') !== null ){
                 let id = e.target.id 
                 const currentProduct = products.find(elem => elem.id==id)
                 productsAdded.push(currentProduct)
+                
+                localStorage.setItem('productsAdded', JSON.stringify(productsAdded) )
+
                 //inserir aqui função para adicionar no carrinho
                 CartController.verify()
                 const li = TemplateCart.gerarTemplate(currentProduct) 
                 CartController.cartShowCase.appendChild(li)
                 CartController.atualizarTotQtd(productsAdded)
+
+
             }
         })
-
-        CartController.cartShowCase.addEventListener('click',(e)=>{
+        CartController.cartShowCase.addEventListener('click',(e)=>{//evento remover
             if(e.target.id){
                 console.log(e.target.id)
                 let id = e.target.id
@@ -35,9 +42,21 @@ class CartController{
                 e.target.closest('li').remove()
                 CartController.verify()
                 CartController.atualizarTotQtd(productsAdded)
+
+                localStorage.setItem('productsAdded', JSON.stringify(productsAdded) )
             }
         })
 
+    }
+    static showProductsOfLocalStorage(){
+        let string = localStorage.getItem('productsAdded')
+        productsAdded = JSON.parse(string) 
+        CartController.verify()
+        productsAdded.forEach(elem =>{
+            const list = TemplateCart.gerarTemplate(elem)
+            CartController.cartShowCase.appendChild(list)
+        })
+        CartController.atualizarTotQtd(productsAdded)
     }
 
     static verify(){
