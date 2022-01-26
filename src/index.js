@@ -1,3 +1,23 @@
+import { SearchProducts } from "./modules/searchproducts.js";
+import { ShowCaseModelator } from "./modules/vitriniModeladora.js"; //classe modeladora
+import { FilterCategory } from "./modules/FilterCategory.js";
+import { FilterSearch } from "./modules/FilterSearch.js";
+
+import { CartController } from "./modules/CartController.js";
+
+
+const products = await SearchProducts.search()
+
+console.log(products)
+
+
+FilterCategory.addEvent(products)
+FilterSearch.addEvent(products)
+ShowCaseModelator.appendList( products )
+
+
+CartController.addEvent(products)
+
 // import { Cart } from "./modules/cart.js";
 
 // const products = document.getElementsByClassName('productsShowcase-list');
@@ -10,12 +30,11 @@
 //     }
 // })
 
-import { SearchProducts } from "./modules/searchproducts.js";
-import { TemplateProducts } from "./modules/templates.js";
+// import { SearchProducts } from "./modules/searchproducts.js";
+// import { TemplateProducts } from "./modules/templates.js";
 
-const products = await SearchProducts.search()
-console.log(products)
+// const products = await SearchProducts.search()
+// console.log(products)
 
-const product = new TemplateProducts(products[0])
-console.log(product)
-
+// const product = new TemplateProducts(products[0])
+// console.log(product)
