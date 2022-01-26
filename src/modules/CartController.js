@@ -11,8 +11,9 @@ class CartController{
     static totalSpan = document.getElementById('total')
 
     static addEvent( products ){
-        
+    
         CartController.showProductsOfLocalStorage()
+        
 
         const ul = document.querySelector('ul')
 
@@ -50,13 +51,16 @@ class CartController{
     }
     static showProductsOfLocalStorage(){
         let string = localStorage.getItem('productsAdded')
-        productsAdded = JSON.parse(string) 
-        CartController.verify()
-        productsAdded.forEach(elem =>{
-            const list = TemplateCart.gerarTemplate(elem)
-            CartController.cartShowCase.appendChild(list)
-        })
-        CartController.atualizarTotQtd(productsAdded)
+        if(string!==null){
+
+            productsAdded = JSON.parse(string) 
+            CartController.verify()
+            productsAdded.forEach(elem =>{
+                const list = TemplateCart.gerarTemplate(elem)
+                CartController.cartShowCase.appendChild(list)
+            })
+            CartController.atualizarTotQtd(productsAdded)
+        }
     }
 
     static verify(){
