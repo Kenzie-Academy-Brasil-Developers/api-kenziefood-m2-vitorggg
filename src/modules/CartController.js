@@ -22,6 +22,7 @@ class CartController{
                 let id = e.target.id 
                 const currentProduct = products.find(elem => elem.id==id)
                 productsAdded.push(currentProduct)
+                console.log(productsAdded)
                 
                 localStorage.setItem('productsAdded', JSON.stringify(productsAdded) )
 
@@ -64,7 +65,8 @@ class CartController{
     }
 
     static verify(){
-        if(productsAdded.length!==0){
+        console.log(productsAdded)
+        if(productsAdded.length !== 0){
             CartController.noProducts.classList.add('hidden')
             CartController.cartShowCase.classList.remove('hidden')
             CartController.totals.classList.remove('hidden')
