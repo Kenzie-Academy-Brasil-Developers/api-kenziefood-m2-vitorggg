@@ -431,6 +431,17 @@ aside .vitrini-carrinho div:nth-child(3) button{
     background: #F8F9FA;
     border-radius: 4px;
     padding: 0;
+    cursor: pointer;
+}
+::-webkit-scrollbar{
+    width: 4px;
+    height: 1px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(204, 204, 204);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(44, 44, 44);
 }
 .totals{
     width: 100%;
