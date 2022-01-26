@@ -11,11 +11,24 @@
 // })
 
 import { SearchProducts } from "./modules/searchproducts.js";
-import { TemplateProducts } from "./modules/templates.js";
+import { ShowCaseModelator } from "./modules/vitriniModeladora.js"; //classe modeladora
+import { FilterCategory } from "./modules/FilterCategory.js";
+import { FilterSearch } from "./modules/FilterSearch.js";
+import { AddCart } from "./modules/addCart.js";
+
 
 const products = await SearchProducts.search()
+
 console.log(products)
 
-const product = new TemplateProducts(products[0])
-console.log(product)
+
+FilterCategory.addEvent(products)
+FilterSearch.addEvent(products)
+ShowCaseModelator.appendList( products )
+
+AddCart.addEvent(products)
+
+
+//const product = new templateProdutos(products[0]) //aqui vem a vitrini modeladora
+//console.log(product)
 
