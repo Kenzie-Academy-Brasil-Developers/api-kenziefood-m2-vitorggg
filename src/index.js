@@ -6,7 +6,6 @@ import { FilterSearch } from "./modules/FilterSearch.js";
 
 import { CartController } from "./modules/CartController.js";
 
-
 const products = await SearchProducts.search()
 
 console.log(products)

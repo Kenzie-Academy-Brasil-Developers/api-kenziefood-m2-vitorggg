@@ -409,7 +409,7 @@ aside .vitrini-carrinho li{
 }
 
 aside .vitrini-carrinho{
-    height: 100%;
+    height: 330px;
     max-height: 340px;
     overflow-y: auto;
     padding: 23px 10px;
