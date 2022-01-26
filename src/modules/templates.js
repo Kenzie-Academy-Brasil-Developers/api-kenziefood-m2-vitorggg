@@ -35,7 +35,7 @@ function templateProdutos({id, nome, preco, categoria, imagem, descricao, create
                     ${descricao}
                 </p>
                 <div class="product-priceAndCart">
-                    <span class="product-price">R$: ${preco.toFixed(2)}</span>
+                    <span class="product-price">R$${preco.toFixed(2)}</span>
                     <button class="product-cart" id=${id}>
                         <img src="public/icons/icon_cart.png" alt="carrinho" id=${id}>
                     </button>

@@ -81,7 +81,7 @@ class CartController{
 
     static atualizarTotQtd(arrayOfProducts){
         CartController.qtdSpan.innerText = CartController.atualizarQtd(arrayOfProducts)
-        CartController.totalSpan.innerText ='R$: '+ CartController.atualizarTotal(arrayOfProducts).toFixed(2)
+        CartController.totalSpan.innerText ='R$ '+ CartController.atualizarTotal(arrayOfProducts).toFixed(2)
     }
 
 }

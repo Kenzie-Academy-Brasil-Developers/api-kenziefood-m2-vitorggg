@@ -13,10 +13,6 @@ class ShowCaseModelator{
 
 }
 
-class CartModelator{
-    
-
-
-}
+class CartModelator{}
 
 export { ShowCaseModelator , CartModelator }

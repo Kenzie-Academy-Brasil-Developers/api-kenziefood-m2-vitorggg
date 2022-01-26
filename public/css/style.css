@@ -100,6 +100,10 @@ body{
     cursor: pointer;
 }
 
+.categorys img{
+    margin-right: 5px;
+}
+
 .categorys:hover{
     border: 1.5px solid #212529;
 }
@@ -192,7 +196,7 @@ body{
     border-radius: 30px;
     font-size: 11px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     font-family: 'Poppins';
     font-weight: 500;
@@ -201,6 +205,10 @@ body{
     position: absolute;
     bottom: -10px;
     left: 12px;
+}
+
+.category-title{
+    margin-left: 5px;
 }
 
 .productsShowcase .category .category-title{
@@ -294,8 +302,8 @@ aside {
 }
 
 .no-products {
-    min-height: 340px;
-    background-color: #ffffff;
+    min-height: 402px;
+    background-color: #F8F9FA;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -338,6 +346,7 @@ aside {
 .products-cart .product-priceAndCart a{
     display: none;
 }
+
 .products-cart{
     list-style: none;
     display: flex;
@@ -356,6 +365,7 @@ aside {
     width: 70px;
     height: 70px;
 }
+
 .products-cart img{
     width: 100%;
     height: 100%;
@@ -399,25 +409,30 @@ aside .vitrini-carrinho li{
 }
 
 aside .vitrini-carrinho{
-    min-height: 405px;
+    height: 100%;
+    max-height: 340px;
     overflow-y: auto;
     padding: 23px 10px;
 }
 
 aside .vitrini-carrinho figure{}
+
 aside .vitrini-carrinho figure img{
     width: 70px;
     height: 70px;
     border-radius: 8px;
 }
+
 aside .vitrini-carrinho div:nth-child(1){
     flex-basis: 25%;
 }
+
 aside .vitrini-carrinho div:nth-child(2){
     flex-basis: 70%;
     padding: 0 10px;
     
 }
+
 aside .vitrini-carrinho div h3{
     font-family: 'Poppins';
     font-style: normal;
@@ -426,6 +441,7 @@ aside .vitrini-carrinho div h3{
     line-height: 20px;
 
 }
+
 aside .vitrini-carrinho div p{
     font-family: Poppins;
     font-style: normal;
@@ -434,6 +450,7 @@ aside .vitrini-carrinho div p{
     line-height: 16px;
     color: #868E96;
 }
+
 aside .vitrini-carrinho div p span{
     font-family: Poppins;
     font-style: normal;
@@ -443,9 +460,11 @@ aside .vitrini-carrinho div p span{
     text-align: right;
     color: #212529;
 }
+
 aside .vitrini-carrinho div:nth-child(3){
     flex-basis: 5%;
 }
+
 aside .vitrini-carrinho div:nth-child(3) button{
     width: 25px;
     height: 25px;
@@ -455,19 +474,24 @@ aside .vitrini-carrinho div:nth-child(3) button{
     padding: 0;
     cursor: pointer;
 }
+
 ::-webkit-scrollbar{
     width: 4px;
     height: 1px;
 }
+
 ::-webkit-scrollbar-track{
     background-color: rgb(204, 204, 204);
 }
+
 ::-webkit-scrollbar-thumb{
     background-color: rgb(44, 44, 44);
 }
+
 .totals{
     width: 100%;
 }
+
 .qtd, .total{
     display: flex;
     justify-content: space-between;
@@ -480,21 +504,14 @@ aside .vitrini-carrinho div:nth-child(3) button{
     color: #000000;
     
 }
+
 .qtd{
     background-color: #F8F9FA;
 }
 
-
-
-
-
-
 .hidden{
     display: none;
 }
-
-
-
 
 @media only screen and (min-width: 470px){
     .category-buttons{
