@@ -40,12 +40,15 @@ class CartController{
                 console.log(e.target.id)
                 let id = e.target.id
                 let indexInArray = productsAdded.findIndex(elem => elem.id==id )
-                productsAdded.splice(indexInArray,1)
-                e.target.closest('li').remove()
-                CartController.verify()
-                CartController.atualizarTotQtd(productsAdded)
-
-                localStorage.setItem('productsAdded', JSON.stringify(productsAdded) )
+                if(indexInArray!==-1){
+                    productsAdded.splice(indexInArray,1)
+                    e.target.closest('li').remove()
+                    CartController.verify()
+                    CartController.atualizarTotQtd(productsAdded)
+    
+                    localStorage.setItem('productsAdded', JSON.stringify(productsAdded) )
+                }
+   
             }
         })
 
@@ -91,7 +94,5 @@ class CartController{
     }
 
 }
-
-
 
 export { CartController  }
