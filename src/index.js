@@ -6,6 +6,8 @@ import { FilterSearch } from "./modules/FilterSearch.js";
 
 import { CartController } from "./modules/CartController.js";
 
+import { ModalController } from "./modules/ModalController.js";
+
 const products = await SearchProducts.search()
 
 console.log(products)
@@ -13,6 +15,7 @@ console.log(products)
 
 ShowCaseModelator.appendList( products )
 
+ModalController.addEvent()
 FilterCategory.addEvent(products)
 FilterSearch.addEvent(products)
 CartController.addEvent(products)
