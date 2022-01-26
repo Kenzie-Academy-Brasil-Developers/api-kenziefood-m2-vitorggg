@@ -9,7 +9,7 @@ function templateProdutos({id, nome, preco, categoria, imagem, descricao, create
         //const ul = document.querySelector('.productsShowcase-list')
         let icon = ''
         if(categoria == 'Frutas') icon = 'public/icons/Icon_fruits.png'
-        if(categoria == 'Bebidas') icon = 'public/icons/Icon_glass of wine (1).png'
+        if(categoria == 'Bebidas') icon = 'public/icons/Icon_glass_of_wine.png'
         if(categoria == 'Panificadora') icon = 'public/icons/Icon_bread.png'
         
         
