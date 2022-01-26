@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/reset.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/modal.css">
+    <title>KenzieFood</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <div class="search-area">
+
+                <figure class="logo">
+                    <img class="logo-img" src="./public/img/Group 1076.png" alt="Logo KenzieFood"/>
+                </figure>
+        
+                <form class="search">
+                    <input class="search-input" type="text" placeholder="Pesquisar por produto"/>
+                    <button class="search-button"></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="category-buttons">
+            <button class="categorys category-todos">Todos</button>
+            <button class="categorys category-panificadora"><img src="./public/icons/Icon_bread.png"/>Panificadora</button>
+            <button class="categorys category-frutas"><img src="./public/icons/Icon_fruits.png"/>Frutas</button>
+            <button class="categorys category-bebidas"><img src="./public/icons/Icon_glass_of_wine.png">Bebidas</button>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="productsShowcase">
+            <ul class="productsShowcase-list">
+
+                <!-- <li class="productsShowcase-list-product">
+                    <figure>
+                        <img src="public/img/panqueca-de-banana-com-aveia.png" alt="Panqueca de banana com aveia" class="img-destaque"/>
+                        <figcaption>Panqueca de banana com aveia</figcaption>
+                        <div class="category">
+                            <img src="public/icons/Icon_bread.png" alt="" class="category-icon"/>
+                            <span class="category-title">
+                                Panificadora
+                            </span>
+                        </div>
+                    </figure>
+                    <div class="productsShowcase-list-content">
+                        <h2 class="product-title">Panqueca de banana com aveia</h2>
+                        <p class="product-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Harum tempore obcaecati laboriosam excepturi id sunt voluptate porro nostrum sed! 
+                            Molestias quam recusandae unde odio quaerat id eveniet. 
+                            Odio, ex sit.
+                        </p>
+                        <div class="product-priceAndCart">
+                            <span class="product-price">R$:20,00 </span>
+                            <a href="#" class="product-cart">
+                                <img src="public/icons/icon_cart.png" alt="carrinho">
+                            </a>
+                        </div>
+                    </div>
+                </li>-->
+
+            </ul>
+
+        </section>
+        
+        <aside id='cartEmpty'>
+            <div class="retangle">
+                <img class='cart-logo' src="./public/icons/carrinho.png" alt="Carrinho de compras">
+                <p class="cart-name">Carrinho</p>
+            </div>
+            <div class="no-products" id="cart">
+                <img class="shopping-bag"src="./public/icons/shopping-bag.png" alt="Bolsa de supermercado">
+                <p class='text'>
+                    <span>Ops!</span>
+
+                    Por enquanto não temos 
+                    produtos no carrinho
+                </p>
+            </div>
+            <ul class="hidden vitrini-carrinho" id="vitrini-carrinho">
+
+            </ul>
+            <div class="totals hidden" id="totals">
+                <div class="qtd">
+                    <span>Quantidade</span>
+                    <span id="qtd"></span>
+                </div>
+                <div class="total">
+                    <span>Total</span>
+                    <span id="total"></span>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+    <div class="rotas" id="rotas">
+        <span id="cadastrar">Cadastrar</span> 
+        <span id="editar">Editar</span> 
+        <span id="deletar">Deletar</span> 
+    </div>
+    <div class="modal hidden" id="modal"></div>
+
+    <script type="Module" src="./src/index.js"></script>
+
+</body>
+

@@ -1,0 +1,87 @@
+.modal{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 44, 7, 0.5);
+    z-index: 10;
+    animation: slideDown;
+    animation-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal section{
+    background-color: white;
+    width: 300px;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+.modal section label,.modal section h2{
+    display: block;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 27px;
+    margin: 5px 0 10px;
+}
+.modal section h2{
+    font-size: 20px;
+}
+.modal section input,.modal section textarea{
+    font-family: 'Inter';
+    width: 250px;
+    border: 0;
+    outline: 0;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(226, 226, 226);
+    box-sizing: border-box;
+}
+.modal section textarea{
+    height: 100px;
+    max-width: 250px;
+    min-width: 250px;
+}
+.modal section button{
+    width: 230px;
+    border: 0;
+    outline: 0;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(255, 44, 7);
+    color: white;
+    display: block;
+    margin: 20px auto;
+    transition: 0.5s all;
+}
+.modal section button:hover{
+    background-color: rgb(209, 209, 209);
+    color:rgb(255, 44, 7) ;
+    transition: 0.5s all;
+}
+select,option{
+    font-family: 'Inter';
+    width: 250px;
+    border: 0;
+    outline: 0;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(226, 226, 226);
+    box-sizing: border-box;
+
+}
+@keyframes slideDown{
+    from{
+        top: 100%;
+    }
+    to{
+        top:0;
+    }
+}
+
+.hidden{
+    display: none;
+}
