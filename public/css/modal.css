@@ -29,6 +29,8 @@
 }
 .modal section h2{
     font-size: 16px;
+    padding: 5px 25px 2px;
+    line-height: 1rem;
 }
 .modal section input,.modal section textarea{
     font-family: 'Inter';
