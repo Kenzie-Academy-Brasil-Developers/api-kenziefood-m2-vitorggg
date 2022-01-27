@@ -15,7 +15,7 @@
 .modal section{
     background-color: white;
     width: 300px;
-    padding: 20px 10px;
+    padding: 10px 0px;
     text-align: center;
     border-radius: 10px;
 }
@@ -23,12 +23,12 @@
     display: block;
     font-family: 'Poppins';
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 27px;
-    margin: 5px 0 10px;
+    margin: 2px 0 5px;
 }
 .modal section h2{
-    font-size: 20px;
+    font-size: 16px;
 }
 .modal section input,.modal section textarea{
     font-family: 'Inter';

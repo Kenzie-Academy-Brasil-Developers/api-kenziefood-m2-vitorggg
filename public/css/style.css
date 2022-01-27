@@ -259,6 +259,9 @@ body{
     border: 0;
     cursor: pointer;
 }
+.productsShowcase-list-content .product-cart:hover{
+    background-color: #54ce9a;
+}
 
 .productsShowcase-list-content .product-cart img{
     width: 11px;
@@ -415,7 +418,7 @@ aside .vitrini-carrinho{
     padding: 23px 10px;
 }
 
-aside .vitrini-carrinho figure{}
+
 
 aside .vitrini-carrinho figure img{
     width: 70px;

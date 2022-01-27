@@ -15,12 +15,20 @@ class FilterSearch{
 
         btnSearch.addEventListener('click',(e)=>{
             e.preventDefault()
+            // let text = inputSearch.value
+            // const filteredArr = FilterSearch.getItem(text , products )
+            // console.log(filteredArr)
+
+            // ShowCaseModelator.appendList(filteredArr)
+        
+        })
+        inputSearch.addEventListener('keyup',(e)=>{
+            e.preventDefault()
             let text = inputSearch.value
             const filteredArr = FilterSearch.getItem(text , products )
             console.log(filteredArr)
 
             ShowCaseModelator.appendList(filteredArr)
-        
         })
         
     }
