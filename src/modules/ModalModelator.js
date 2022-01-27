@@ -44,7 +44,7 @@ class ModalModelator{
         })
 
         ModalModelator.form.innerHTML=`
-            <h2>Escolha o produto para editar:</h2>
+            <h2>Escolha um produto criado para editar:</h2>
             <select name="id">
                 ${options}
             </select>
@@ -68,7 +68,7 @@ class ModalModelator{
         })
 
         ModalModelator.form.innerHTML=`
-            <h2>Escolha o produto que deseja deletar</h2>
+            <h2>Escolha o produto criado que deseja deletar</h2>
             <select name="id">
                 ${options}
             </select>

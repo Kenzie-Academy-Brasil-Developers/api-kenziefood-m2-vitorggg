@@ -27,7 +27,7 @@ async function reiniciarAplicacao(){
     
     console.log(products)
     ShowCaseModelator.appendList( products ) //insere produtos na vitrini
-    ModalController.addEvent(produtosCriados) // adiciona eventos de clique nos modais
+    //ModalController.addEvent(produtosCriados) // adiciona eventos de clique nos modais
     FilterCategory.addEvent(products) //filtra por categoria
     FilterSearch.addEvent(products)
 }

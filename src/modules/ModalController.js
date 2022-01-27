@@ -3,10 +3,10 @@ import {GerarObjProduct} from './GerarObjProduct.js'
 import {RotaPost} from './metodos/post.js'
 import {RotaPatch} from './metodos/patch.js'
 import {RotaDelete} from './metodos/delete.js'
-import {reiniciarAplicacao} from '../index.js'
+import {reiniciarAplicacao,products} from '../index.js'
 
 class ModalController{
-    static async addEvent(products){
+    static async addEvent(){
         const rotas = document.getElementById('rotas')
         const modal = document.getElementById('modal')
         const section = ModalModelator.section
