@@ -9,8 +9,15 @@ class ShowCaseModelator{
             let li = templateProdutos(productsArray[i])
             ul.appendChild(li)
         }
+        /* ------------------Adiciona hover-----------------------*/   
+        const btn = document.querySelectorAll('.product-cart')
+        btn.forEach(elem=>{
+            elem.addEventListener('mouseover',(e)=>e.currentTarget.querySelector('img').src = 'public/icons/carrinho.png')
+            elem.addEventListener('mouseout',(e)=>e.currentTarget.querySelector('img').src = 'public/icons/icon_cart.png')
+        })
+        
     }
-
+    
 }
 
 class CartModelator{}
