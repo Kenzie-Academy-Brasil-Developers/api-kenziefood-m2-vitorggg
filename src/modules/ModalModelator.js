@@ -2,90 +2,80 @@
 class ModalModelator{
     static section = document.createElement('section')//section pega o template
     static modal = document.getElementById('modal') //section -> vai aqui (appenChild)
+    static form = document.createElement('form')
 
-    static criarTemplateCadastro(){
-        const form = document.createElement('form')
+    static criarTemplateCadastro(product){
+       
 
-        form.innerHTML=`
+        ModalModelator.form.innerHTML=`
             <h2>Cadastre um novo produto</h2>
 
-            <label>Digite o Nome do Produto</label>
+            <label>Digite o Nome</label>
             <input type="text" placeholder="Nome" name="nome" >
 
-            <label>Preço do produto</label>
+            <label>Preço</label>
             <input type="number" placeholder="Preço" name="preco" />
 
-            <label>Categoria do produto</label>
-            <select>
-                <option>Panificadora</option>
-                <option>Bebidas</option>
-                <option>Frutas</option>
+            <label>Categoria</label>
+            <select name="categoria">
+                <option value="Panificadora">Panificadora</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Frutas">Frutas</option>
             </select>
 
-            <label>Imagem do produto</label>
-            <input type="text" placeholder="Deixe uma url" name="img" />
+            <label>Imagem</label>
+            <input type="text" placeholder="Deixe uma url" name="imagem" />
 
-            <label>Descrição do produto</label>
+            <label>Descrição</label>
             <textarea placeholder="Digite a descrição do produto" name="descricao"></textarea>
             
-            <button id="signIn">Cadastrar</button>
+            <button id="postar">Cadastrar</button>
         `
-        ModalModelator.section.appendChild(form)
+        ModalModelator.section.appendChild(ModalModelator.form)
         return ModalModelator.section
 
     }
 
-    static criarTemplateEditar(){
-        const form = document.createElement('form')
+    static criarTemplateEditar(product){
 
-        form.innerHTML=`
+        let options = ''
+        product.forEach(elem=>{
+            options+=`<option value=${elem.id}>${elem.nome}</option>\n`
+        })
+
+        ModalModelator.form.innerHTML=`
             <h2>Escolha o produto para editar:</h2>
-            <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
+            <select name="id">
+                ${options}
             </select>
-            <label>Digite o Nome do Produto</label>
-            <input type="text" placeholder="Nome" name="nome" >
-        
+    
             <label>Preço do produto</label>
             <input type="number" placeholder="Preço" name="preco" />
-
-            <label>Categoria do produto</label>
-            <select>
-                <option>Panificadora</option>
-                <option>Bebidas</option>
-                <option>Frutas</option>
-            </select>
-
-            <label>Imagem do produto</label>
-            <input type="text" placeholder="Deixe uma url" name="img" />
-
-            <label>Descrição do produto</label>
-            <textarea placeholder="Digite a descrição do produto" name="descricao"></textarea>
-            
+    
             <button id="editar">Editar</button>
         `
-        ModalModelator.section.appendChild(form)
+        ModalModelator.section.appendChild(ModalModelator.form)
         return ModalModelator.section
 
     }
 
-    static criarTemplateDeletar(){
-        const form = document.createElement('form')
+    static criarTemplateDeletar(product){
+        
 
-        form.innerHTML=`
+        let options = ''
+        product.forEach(elem=>{
+            options+=`<option id=${elem.id} value=${elem.id}>${elem.nome}</option>\n`
+        })
+
+        ModalModelator.form.innerHTML=`
             <h2>Escolha o produto que deseja deletar</h2>
-            <select>
-                <option>produto 1</option>
-                <option>produto 2</option>
-                <option>produto 3</option>
+            <select name="id">
+                ${options}
             </select>
-            <button id="Deletar">Deletar</button>
+            <button id="deletar">Deletar</button>
         `
-        ModalModelator.section.appendChild(form)
+        ModalModelator.section.appendChild(ModalModelator.form)
         return ModalModelator.section
-
 
     }
     // nome, preco, categoria, imagem, descricao

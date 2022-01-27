@@ -14,7 +14,6 @@ class CartController{
     
         CartController.showProductsOfLocalStorage()
         
-
         const ul = document.querySelector('ul')
 
         ul.addEventListener('click',(e)=>{ //evento adicionar
@@ -48,7 +47,6 @@ class CartController{
     
                     localStorage.setItem('productsAdded', JSON.stringify(productsAdded) )
                 }
-   
             }
         })
 
@@ -56,6 +54,8 @@ class CartController{
     static showProductsOfLocalStorage(){
         let string = localStorage.getItem('productsAdded')
         if(string!==null){
+            CartController.cartShowCase.innerHTML = ''
+
 
             productsAdded = JSON.parse(string) 
             CartController.verify()
@@ -68,7 +68,7 @@ class CartController{
     }
 
     static verify(){
-        console.log(productsAdded)
+
         if(productsAdded.length !== 0){
             CartController.noProducts.classList.add('hidden')
             CartController.cartShowCase.classList.remove('hidden')
