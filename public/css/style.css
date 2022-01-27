@@ -181,6 +181,7 @@ body{
     border: 3px solid #FFE9EE;
     border-radius: 8px;
     cursor: pointer;
+    object-fit: none;
 }
 
 .productsShowcase-list-product .img-destaque:hover{
@@ -424,6 +425,7 @@ aside .vitrini-carrinho figure img{
     width: 70px;
     height: 70px;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 aside .vitrini-carrinho div:nth-child(1){

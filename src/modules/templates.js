@@ -53,7 +53,7 @@ const ul = document.createElement('ul')
 
 class TemplateCart{
 
-    static gerarTemplate({nome,categoria,preco,imagem,id}){
+    static gerarTemplate({nome='',categoria,preco,imagem,id}){
         const li = document.createElement('li')
         li.classList.add('cart-list')
         li.innerHTML = `

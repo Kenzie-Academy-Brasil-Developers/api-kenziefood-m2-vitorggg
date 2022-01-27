@@ -1,5 +1,5 @@
 import { TemplateCart } from './templates.js'
-
+import { products } from '../index.js'
 let productsAdded = []
 
 class CartController{
@@ -10,11 +10,11 @@ class CartController{
     static qtdSpan = document.getElementById('qtd')
     static totalSpan = document.getElementById('total')
 
-    static addEvent( products ){
+    static addEvent(  ){
     
         CartController.showProductsOfLocalStorage()
-        
         const ul = document.querySelector('ul')
+        
 
         ul.addEventListener('click',(e)=>{ //evento adicionar
             if( e.target.closest('button') !== null ){
@@ -34,6 +34,7 @@ class CartController{
 
             }
         })
+        
         CartController.cartShowCase.addEventListener('click',(e)=>{//evento remover
             if(e.target.id){
                 console.log(e.target.id)
@@ -56,8 +57,8 @@ class CartController{
         if(string!==null){
             CartController.cartShowCase.innerHTML = ''
 
-
-            productsAdded = JSON.parse(string) 
+            productsAdded = JSON.parse(string).filter(elem=>elem!==null) 
+            
             CartController.verify()
             productsAdded.forEach(elem =>{
                 const list = TemplateCart.gerarTemplate(elem)

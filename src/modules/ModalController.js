@@ -6,7 +6,7 @@ import {RotaDelete} from './metodos/delete.js'
 import {reiniciarAplicacao} from '../index.js'
 
 class ModalController{
-    static async addEvent(product){
+    static async addEvent(products){
         const rotas = document.getElementById('rotas')
         const modal = document.getElementById('modal')
         const section = ModalModelator.section
@@ -16,17 +16,17 @@ class ModalController{
             if(e.target.innerText=='Cadastrar'){
                 section.innerHTML = ''
                 modal.classList.remove('hidden')
-                modal.appendChild( ModalModelator.criarTemplateCadastro(product) )
+                modal.appendChild( ModalModelator.criarTemplateCadastro(products) )
             }
             if(e.target.innerText=='Editar'){
                 section.innerHTML = ''
                 modal.classList.remove('hidden')
-                modal.appendChild( ModalModelator.criarTemplateEditar(product) )
+                modal.appendChild( ModalModelator.criarTemplateEditar(products) )
             }
             if(e.target.innerText=='Deletar'){
                 section.innerHTML = ''
                 modal.classList.remove('hidden')
-                modal.appendChild( ModalModelator.criarTemplateDeletar(product) )
+                modal.appendChild( ModalModelator.criarTemplateDeletar(products) )
             }
         })
         
@@ -57,7 +57,7 @@ class ModalController{
                 console.log('postar')
 
                 const dadosTratados = new GerarObjProduct(objDados)
-                dadosTratados.getId(product)
+                dadosTratados.getId(products)
                 console.log(dadosTratados) //em seguida fazer o post
 
                 const response = await RotaPost.post(dadosTratados)

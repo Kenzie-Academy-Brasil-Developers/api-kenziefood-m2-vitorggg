@@ -1,5 +1,7 @@
+const imgDefault = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnuSe54Qjwl5X30PZuQTeJGnDtTRIL5UQQ4w&usqp=CAU'
+
 class GerarObjProduct{
-    constructor({nome,categoria,imagem,descricao,preco}){
+    constructor({nome,categoria,imagem=imgDefault,descricao,preco}){
         this.nome = nome
         this.categoria = categoria
         this.imagem =imagem
