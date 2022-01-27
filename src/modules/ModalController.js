@@ -3,7 +3,7 @@ import {GerarObjProduct} from './GerarObjProduct.js'
 import {RotaPost} from './metodos/post.js'
 import {RotaPatch} from './metodos/patch.js'
 import {RotaDelete} from './metodos/delete.js'
-import {reiniciarAplicacao,products} from '../index.js'
+import {reiniciarAplicacao,produtosCriados} from '../index.js'
 
 class ModalController{
     static async addEvent(){
@@ -16,17 +16,17 @@ class ModalController{
             if(e.target.innerText=='Cadastrar'){
                 section.innerHTML = ''
                 modal.classList.remove('hidden')
-                modal.appendChild( ModalModelator.criarTemplateCadastro(products) )
+                modal.appendChild( ModalModelator.criarTemplateCadastro(produtosCriados) )
             }
             if(e.target.innerText=='Editar'){
                 section.innerHTML = ''
                 modal.classList.remove('hidden')
-                modal.appendChild( ModalModelator.criarTemplateEditar(products) )
+                modal.appendChild( ModalModelator.criarTemplateEditar(produtosCriados) )
             }
             if(e.target.innerText=='Deletar'){
                 section.innerHTML = ''
                 modal.classList.remove('hidden')
-                modal.appendChild( ModalModelator.criarTemplateDeletar(products) )
+                modal.appendChild( ModalModelator.criarTemplateDeletar(produtosCriados) )
             }
         })
         
@@ -57,7 +57,7 @@ class ModalController{
                 console.log('postar')
 
                 const dadosTratados = new GerarObjProduct(objDados)
-                dadosTratados.getId(products)
+                dadosTratados.getId(produtosCriados)
                 console.log(dadosTratados) //em seguida fazer o post
 
                 const response = await RotaPost.post(dadosTratados)

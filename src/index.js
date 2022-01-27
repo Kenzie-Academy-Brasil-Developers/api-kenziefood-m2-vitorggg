@@ -31,4 +31,4 @@ async function reiniciarAplicacao(){
     FilterCategory.addEvent(products) //filtra por categoria
     FilterSearch.addEvent(products)
 }
-export {reiniciarAplicacao,products}
+export {reiniciarAplicacao,products,produtosCriados}
