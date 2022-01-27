@@ -4,7 +4,6 @@ const token ='Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjQ
 
 class RotaPost{
     static async post(obj){
-        console.log( JSON.stringify(obj) )
         const promise = await fetch("https://kenzie-food-api.herokuapp.com/my/product", 
         { //https://kenzie-food-api.herokuapp.com/product
             method:"post",

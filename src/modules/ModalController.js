@@ -77,8 +77,8 @@ class ModalController{
                 console.log(body)
                 //fazer aqui o patch
 
-                // const response = await RotaPatch.patch(objDados)
-                // console.log(response)
+                const response = await RotaPatch.patch(body,objDados.id)
+                console.log(response)
 
                 modal.classList.add('hidden')
                 reiniciarAplicacao()
@@ -88,9 +88,8 @@ class ModalController{
                 console.log(objDados)
 
                 //fazer aqui delete 
-
-                // const response = await RotaDelete.delete(objDados)
-                // console.log(response)
+                await RotaDelete.delete(objDados.id)
+                
                 modal.classList.add('hidden')
                 reiniciarAplicacao()
             }
