@@ -63,8 +63,8 @@ class ModalController{
                 const response = await RotaPost.post(dadosTratados)
                 console.log(response)
 
-                modal.classList.add('hidden')
                 reiniciarAplicacao()
+                modal.classList.add('hidden')
 
                 //{id, nome, preco, categoria, imagem, descricao, createdAt, updatedAt}
             }
@@ -80,8 +80,8 @@ class ModalController{
                 const response = await RotaPatch.patch(body,objDados.id)
                 console.log(response)
 
-                modal.classList.add('hidden')
                 reiniciarAplicacao()
+                modal.classList.add('hidden')
             }
             if(optionSelected=='deletar'){
                 objDados.id = Number(objDados.id)
@@ -90,8 +90,8 @@ class ModalController{
                 //fazer aqui delete 
                 await RotaDelete.delete(objDados.id)
                 
-                modal.classList.add('hidden')
                 reiniciarAplicacao()
+                modal.classList.add('hidden')
             }
         })
 
