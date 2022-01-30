@@ -53,7 +53,9 @@ const ul = document.createElement('ul')
 
 class TemplateCart{
 
-    static gerarTemplate({nome='',categoria,preco,imagem,id}){
+    static gerarTemplate({nome='',categoria,preco,imagem,id,quantity=1}){
+        let maximumOfLetters = 17
+        if(nome.length>maximumOfLetters) nome = nome.slice(0,maximumOfLetters)+'...'
         const li = document.createElement('li')
         li.classList.add('cart-list')
         li.innerHTML = `
@@ -67,9 +69,15 @@ class TemplateCart{
             <span>R$:${preco.toFixed(2)}</span>
         </div>
         <div>
-            <button>
-                <img src="./public/icons/thrash.png" alt="lixo" id=${id} />
+            <button id="removeBtn-${id}">
+                <img src="./public/icons/thrash.png" alt="lixo" id="remove-${id}" />
             </button>
+            <div class='qtd-controller' id="qtdController-${id}" >
+                <span class='minus' id="minus-${id}" > - </span>
+                <span class='qtd-controller__number'> ${quantity} </span>
+                <span class='plus' id="plus-${id}"> + </span>
+            </div>
+
         </div>
         `
         return li

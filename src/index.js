@@ -6,10 +6,11 @@ import { CartController } from "./modules/CartController.js";
 import { ModalController } from "./modules/ModalController.js";
 import { RotaGet } from "./modules/metodos/get.js";
 
-let productosFixos = await SearchProducts.search()
+
 let produtosCriados = await RotaGet.get()
 
-let products = [...productosFixos,...produtosCriados]
+let products = [...produtosCriados]
+
 console.log(produtosCriados)
 
 console.log(products)
@@ -21,9 +22,9 @@ CartController.addEvent(products)
 
 
 async function reiniciarAplicacao(){
-    productosFixos = await SearchProducts.search()
+
     produtosCriados = await RotaGet.get()
-    products = [...productosFixos,...produtosCriados]
+    products = [...produtosCriados]
     
     console.log(products)
     ShowCaseModelator.appendList( products ) //insere produtos na vitrini

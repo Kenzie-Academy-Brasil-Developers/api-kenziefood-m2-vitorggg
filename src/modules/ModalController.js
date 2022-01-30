@@ -70,14 +70,11 @@ class ModalController{
             }
             if(optionSelected=='editar'){
                 objDados.id = Number(objDados.id)
-                objDados.preco = Number(objDados.preco)
-                const req = { id:objDados.id }
-                const body = { preco:objDados.preco }
-                console.log(req)
-                console.log(body)
+                
+                console.log(objDados)
                 //fazer aqui o patch
 
-                const response = await RotaPatch.patch(body,objDados.id)
+                const response = await RotaPatch.patch(objDados,objDados.id)
                 console.log(response)
 
                 reiniciarAplicacao()

@@ -166,9 +166,12 @@ body{
     margin: 27px 0 27px 18px;
     max-width: 1200px;
 }
+.productsShowcase-list-content{
 
+
+}
 .productsShowcase-list-product{
-    margin: 0px 23px 28px 0px;
+    margin: 0px 10px 28px 0px;
     width: 300px;
 
 }
@@ -187,9 +190,8 @@ body{
     object-fit: none;
 }
 
-.productsShowcase-list-product .img-destaque:hover{
+.productsShowcase-list-product:hover .img-destaque{
     border: 3px solid #FF2253;
-
 }
 
 .productsShowcase .category{
@@ -236,6 +238,7 @@ body{
     line-height: 16px;
     color: rgba(0, 0, 0, 0.5);
     margin: 0 0 16px;
+    min-height: 53px;
 }
 
 .productsShowcase-list-content .product-priceAndCart{
@@ -280,8 +283,11 @@ body{
 
 aside {
     width: 312px;
-    min-height: 499.11px;;
+    min-height: 400px;;
     margin: 0 auto 30px;
+    max-height: 500px;
+    position: sticky;
+    top: 10px;
 }
 
 .retangle {
@@ -416,10 +422,10 @@ aside .vitrini-carrinho li{
 }
 
 aside .vitrini-carrinho{
-    height: 330px;
-    max-height: 340px;
+    min-height: 250px;
+    max-height: 250px;
     overflow-y: auto;
-    padding: 23px 10px;
+    padding: 23px 5px 0 10px;
 }
 
 
@@ -434,10 +440,12 @@ aside .vitrini-carrinho figure img{
 aside .vitrini-carrinho div:nth-child(1){
     flex-basis: 25%;
 }
-
+aside .vitrini-carrinho div:nth-child(2) span{
+    font-size: 10px;
+}
 aside .vitrini-carrinho div:nth-child(2){
-    flex-basis: 70%;
-    padding: 0 10px;
+    flex-basis: 56%;
+    padding: 0 0 0 10px;
     
 }
 
@@ -446,7 +454,7 @@ aside .vitrini-carrinho div h3{
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 1rem;
 
 }
 
@@ -470,9 +478,17 @@ aside .vitrini-carrinho div p span{
 }
 
 aside .vitrini-carrinho div:nth-child(3){
-    flex-basis: 5%;
+    flex-basis: 19%;
+    text-align: center;
 }
-
+aside .vitrini-carrinho div:nth-child(3) img{
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+aside .vitrini-carrinho div:nth-child(3) img:hover{
+    border: 2px solid gray;
+}
 aside .vitrini-carrinho div:nth-child(3) button{
     width: 25px;
     height: 25px;
@@ -482,6 +498,54 @@ aside .vitrini-carrinho div:nth-child(3) button{
     padding: 0;
     cursor: pointer;
 }
+
+aside .vitrini-carrinho div:nth-child(3) div{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 6px 0 0;
+    padding: 0;
+}
+
+aside .vitrini-carrinho div:nth-child(3) span{
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins';
+}
+aside .vitrini-carrinho div:nth-child(3) .minus{
+    background-color: rgb(24, 24, 24);
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+aside .vitrini-carrinho div:nth-child(3) .minus:hover{
+    background-color: rgb(73, 73, 73);
+}
+aside .vitrini-carrinho div:nth-child(3) .plus:hover{
+    background-color: tomato;
+}
+aside .vitrini-carrinho div:nth-child(3) .plus{
+    background-color: rgb(238, 36, 0);
+    cursor: pointer;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 14px;
+
+}
+aside .vitrini-carrinho div:nth-child(3) .qtd-controller__number{
+    background-color: rgb(218, 218, 218);
+    color: black;
+    font-size: 10px;
+}
+
+
+
 
 ::-webkit-scrollbar{
     width: 4px;
@@ -529,14 +593,14 @@ aside .vitrini-carrinho div:nth-child(3) button{
 
     .productsShowcase{
         /* margin: 0 auto ; */
-        margin-left: 56px;
+        margin-left: 0px;
     }
 
     .productsShowcase-list{
         display: flex;
         flex-wrap: wrap;
         overflow-x: hidden;
-        margin: 27px 18px 27px;
+        margin: 0px 0px 27px;
         
     }
 
@@ -571,7 +635,7 @@ aside .vitrini-carrinho div:nth-child(3) button{
     }    
 
     aside{
-        margin-right: 55px;
+        margin: 0px;
     }
 
 }
